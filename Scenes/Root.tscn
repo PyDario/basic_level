@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/LevelRoot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Code/Root.gd" type="Script" id=4]
+
+[node name="Root" type="Node"]
+script = ExtResource( 4 )
+
+[node name="LevelContainerL1" type="Node2D" parent="."]
+
+[node name="LevelRoot" parent="LevelContainerL1" instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 283, 166 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
